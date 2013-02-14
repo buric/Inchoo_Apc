@@ -4,7 +4,7 @@
     {
         public function indexAction()
         {
-            if(function_exists('apc_clear_cache '))
+            if(function_exists('apc_clear_cache'))
             {
                 if(
                     apc_clear_cache() &&
