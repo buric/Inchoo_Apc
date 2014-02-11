@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <Inchoo_Apc>
-            <version>0.1.0</version>
-        </Inchoo_Apc>
+        <Buric_Apc>
+            <version>1.0.0</version>
+        </Buric_Apc>
     </modules>
     <admin>
         <routers>
             <adminhtml>
                 <args>
                     <modules>
-                        <Inchoo_Apc before="Mage_Adminhtml">Inchoo_Apc_Adminhtml</Inchoo_Apc>
+                        <Buric_Apc before="Mage_Adminhtml">Buric_Apc_Adminhtml</Buric_Apc>
                     </modules>
                 </args>
             </adminhtml>

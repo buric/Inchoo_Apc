@@ -7,7 +7,7 @@
  * @link    https://github.com/buric/Inchoo_Apc
  */
 
-class Inchoo_Apc_Adminhtml_ClearapcController extends Mage_Adminhtml_Controller_Action
+class Buric_Apc_Adminhtml_ClearapcController extends Mage_Adminhtml_Controller_Action
 {
     public function indexAction()
     {
