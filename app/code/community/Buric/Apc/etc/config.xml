@@ -16,4 +16,33 @@
             </adminhtml>
         </routers>
     </admin>
+    <global>
+        <models>
+            <buric_apc>
+                <class>Buric_Apc_Model</class>
+            </buric_apc>
+        </models>
+    </global>
+    <adminhtml>
+        <events>
+            <controller_action_postdispatch_adminhtml_cache_flushAll>
+                <observers>
+                    <buric_apc>
+                        <type>singleton</type>
+                        <class>buric_apc/observer</class>
+                        <method>clearApc</method>
+                    </buric_apc>
+                </observers>
+            </controller_action_postdispatch_adminhtml_cache_flushAll>
+            <controller_action_postdispatch_adminhtml_cache_flushSystem>
+                <observers>
+                    <buric_apc>
+                        <type>singleton</type>
+                        <class>buric_apc/observer</class>
+                        <method>clearApc</method>
+                    </buric_apc>
+                </observers>
+            </controller_action_postdispatch_adminhtml_cache_flushSystem>
+        </events>
+    </adminhtml>
 </config>

@@ -14,9 +14,7 @@ class Buric_Apc_Adminhtml_ClearapcController extends Mage_Adminhtml_Controller_A
         if(function_exists('apc_clear_cache'))
         {
             if(
-                apc_clear_cache() &&
-                apc_clear_cache('user') &&
-                apc_clear_cache('opcode')
+                Mage::getModel('buric_apc/observer')->clearApc()
             )
             {
                 Mage::getSingleton('adminhtml/session')->addSuccess('APC cache flushed successfully.');
