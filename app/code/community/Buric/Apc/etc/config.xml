@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Buric_Apc>
-            <version>1.0.0</version>
+            <version>2.0.0</version>
         </Buric_Apc>
     </modules>
     <admin>
@@ -43,6 +43,15 @@
                     </buric_apc>
                 </observers>
             </controller_action_postdispatch_adminhtml_cache_flushSystem>
+            <core_block_abstract_to_html_after>
+                <observers>
+                    <buric_apc>
+                        <type>singleton</type>
+                        <class>buric_apc/observer</class>
+                        <method>injectHtml</method>
+                    </buric_apc>
+                </observers>
+            </core_block_abstract_to_html_after>
         </events>
     </adminhtml>
 </config>
