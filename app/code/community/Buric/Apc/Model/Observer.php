@@ -10,7 +10,7 @@
 class Buric_Apc_Model_Observer {
 
     public function clearApc() {
-        return apc_clear_cache() && apc_clear_cache('user') && apc_clear_cache('opcode');
+        return function_exists('apc_clear_cache') && apc_clear_cache() && apc_clear_cache('user') && apc_clear_cache('opcode');
     }
 
     public function injectHtml(Varien_Event_Observer $observer) {
