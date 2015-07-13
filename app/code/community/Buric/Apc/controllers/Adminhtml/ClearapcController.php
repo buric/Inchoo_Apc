@@ -31,4 +31,9 @@ class Buric_Apc_Adminhtml_ClearapcController extends Mage_Adminhtml_Controller_A
             $this->_redirect('adminhtml/cache/index');
         }
     }
+    
+    protected function _isAllowed()
+    {
+        return true;
+    }
 }
